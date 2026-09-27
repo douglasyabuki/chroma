@@ -5,6 +5,7 @@ import { MaterialButton } from "@/components/ui/material/button";
 import { MaterialCard } from "@/components/ui/material/card";
 import { MaterialCheckbox } from "@/components/ui/material/checkbox";
 import { MaterialChip } from "@/components/ui/material/chip";
+import { MaterialRipple } from "@/components/ui/material/ripple";
 import { MaterialSwitch } from "@/components/ui/material/switch";
 import {
   MaterialTabs,
@@ -151,9 +152,11 @@ export function MaterialComponentShowcase() {
                 </fieldset>
                 <div className="flex flex-wrap gap-x-2 gap-y-1">
                   <MaterialButton type="submit" leadingIcon={<SaveIcon />}>
+                    <MaterialRipple />
                     Save project
                   </MaterialButton>
                   <MaterialButton variant="outlined" onClick={reset}>
+                    <MaterialRipple />
                     Reset
                   </MaterialButton>
                 </div>
@@ -257,6 +260,7 @@ export function MaterialComponentShowcase() {
                   announce("A project copy was created in this preview.")
                 }
               >
+                <MaterialRipple />
                 Duplicate
               </MaterialButton>
               <MaterialButton
@@ -267,6 +271,7 @@ export function MaterialComponentShowcase() {
                   )
                 }
               >
+                <MaterialRipple />
                 Help
               </MaterialButton>
               <MaterialButton
@@ -275,9 +280,13 @@ export function MaterialComponentShowcase() {
                   announce("The project is ready to share in this preview.")
                 }
               >
+                <MaterialRipple />
                 Share
               </MaterialButton>
-              <MaterialButton disabled>Publish</MaterialButton>
+              <MaterialButton disabled>
+                <MaterialRipple />
+                Publish
+              </MaterialButton>
             </div>
             <MaterialTextField
               label="Workspace"
